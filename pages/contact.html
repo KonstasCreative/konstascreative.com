@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -19,14 +19,15 @@
       <div class="nav-container">
         <img class="logo" src="../assets/images/logo.png" alt="logo" />
         <ul>
-          <li><a href="/pages/index.html">HOME</a></li>
-          <li><a href="/pages/about.html">ABOUT</a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="/pages/index.html#pricing">PRICING</a></li>
-          <li><a href="/pages/contact.html">CONTACT</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#whatwedo">SERVICES</a></li>
+          <li><a href="index.html#pricing">PRICING</a></li>
+          <li><a href="#blog">BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </div>
-      <a class="primaryBtn" href="contact.html">GET STARTED</a>
+      <a class="primaryBtn" href="#">GET STARTED</a>
     </nav>
     <main>
       <section id="hero-contact">
@@ -64,7 +65,7 @@
             <li class="links-li">
               <img src="../assets/icons/mail.svg" alt="mail icon" />
               <div class="links-flex-group">
-                <span class="links-header">EMAIL</span>
+                <span class="links-header">Email</span>
                 <a class="links-link" href="mailto:gkonstas89@gmail.com"
                   >gkonstas89@gmail.com</a
                 >
@@ -74,8 +75,8 @@
             <li class="links-li">
               <img src="../assets/icons/pin.svg" alt="pin icon" />
               <div class="links-flex-group">
-                <span class="links-header">LOCATION</span>
-                <a class="links-link" href="tel:306972900860">Athens, Greece</a>
+                <span class="links-header">Location</span>
+                <a class="links-link">Athens, Greece</a>
               </div>
             </li>
           </ul>
@@ -85,13 +86,31 @@
             <h2>Leave Us a Message</h2>
 
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              autocomplete="name"
+            />
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
 
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              autocomplete="tel"
+            />
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
@@ -126,16 +145,24 @@
         </div>
         <div class="footer-col">
           <h3>QUICK LINKS</h3>
-          <a href="/pages/index.html">HOME</a>
-          <a href="/pages/about.html">ABOUT</a>
-          <a href="#">SERVICES</a>
-          <a href="#">BLOG</a>
-          <a href="/pages/index.html#pricing">PRICING</a>
+          <div class="footer-col-subcol-container">
+            <div class="footer-col-subcol">
+              <a href="/pages/index.html">Home</a>
+              <a href="/pages/about.html">About</a>
+              <a href="/pages/index.html#whatwedo">Services</a>
+              <a href="#blog">BLOG</a>
+            </div>
+            <div class="footer-col-subcol">
+              <a href="/pages/index.html#pricing">Pricing</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
         </div>
         <div class="footer-col">
           <h3>RESOURCES</h3>
           <a href="#">SEO</a>
-          <a href="">PAGE SPEED</a>
+          <a href="#">Page Speed</a>
+          <a href="#">Google Analytics</a>
         </div>
 
         <div class="footer-col">
