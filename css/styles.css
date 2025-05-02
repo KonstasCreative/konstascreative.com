@@ -126,44 +126,56 @@ nav ul li:hover {
   letter-spacing: 1px;
   background-color: var(--text-white);
   color: var(--bg-black);
-  z-index: 2;
-  overflow: hidden;
-  --x: 100%;
 }
-.secondaryBtn svg,
+
+.secondaryBtn img,
 .secondaryBtn span {
   z-index: 2;
 }
+
 .secondaryBtn::before,
 .secondaryBtn::after {
+  border-radius: 9999px;
+  --angle: 0deg;
   content: "";
   position: absolute;
-  top: 50%;
-  left: var(--x);
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: radial-gradient(
-    43.3% 44.23% at 50% 49.51%,
-    #ffe6d980,
-    #f4d2bf 64%,
-    hsla(15, 5%, 83%, 0) 100%
+  inset: -4px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0%,
+    var(--blue) 50%,
+    var(--orange) 100%
   );
-  filter: blur(5px);
-  transition: left 0.3s ease;
-  pointer-events: none;
+  animation: glowing-border 4s linear infinite;
 }
 
-.secondaryBtn::after {
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    #ffe6d980,
-    #ffaa81 30%,
-    #ffda9f 37.5%,
-    rgba(255, 170, 129, 0.5) 52%,
-    rgba(210, 106, 58, 0) 92.5%
-  );
+.secondaryBtn::before {
+  filter: blur(10px);
+  z-index: -2;
+  opacity: 0.7;
+}
+
+.secondaryBtn:hover::before {
+  animation: glowing-border 0.2s linear infinite;
+}
+.secondaryBtn:hover::after {
+  animation: glowing-border 0.2s linear infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glowing-border {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 .section-title-dark {
@@ -253,11 +265,10 @@ footer {
   height: 50%;
   background: linear-gradient(
     to right,
-    rgba(255, 99, 8, 0.1),
-    rgba(255, 99, 8, 0.1),
-    rgba(189, 201, 230, 0.1),
-    rgba(151, 196, 255, 0.1),
-    rgba(151, 196, 255, 0.1)
+    rgba(255, 87, 34, 0.1) 0%,
+    rgba(255, 87, 34, 0.1) 25%,
+    rgba(30, 144, 255, 0.1) 75%,
+    rgba(30, 144, 255, 0.1) 100%
   );
   mask: radial-gradient(at center top, black, transparent 70%);
   pointer-events: none;
