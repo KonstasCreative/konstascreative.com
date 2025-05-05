@@ -10,7 +10,7 @@
 
 #hero-contact h1 {
   font-size: 5rem;
-  max-width: 20ch;
+  max-width: 18ch;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.2), #fff 100%);
   -webkit-background-clip: text;
   background-clip: text;

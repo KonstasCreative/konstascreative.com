@@ -402,6 +402,7 @@ img.nope {
 }
 
 .blog-card div {
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
