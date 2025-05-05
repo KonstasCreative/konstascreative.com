@@ -103,8 +103,6 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2px;
   margin-bottom: 2rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--border-color);
 }
 
 @media (min-width: 1201px) {
@@ -116,8 +114,7 @@ h1 {
 .card {
   background-color: var(--bg-black);
   padding: 3rem;
-  transition: background 1.3s ease-in-out;
-  /* border: 1px solid var(--border-color); */
+  outline: 2px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -303,12 +300,13 @@ h1 {
 .pricing-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
 }
 
 .pricing-card {
   background-color: transparent;
   padding: 3rem;
-  border: 1px solid var(--border-color);
+  outline: 2px solid var(--border-color);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -316,7 +314,7 @@ h1 {
 
 .pricing-card li {
   font-size: 1rem;
-  color: var(--text-gray);
+  color: var(--text-white);
   font-weight: 400;
   margin-bottom: 1rem;
   display: flex;
@@ -325,15 +323,25 @@ h1 {
   gap: 0.5rem;
 }
 
+.pricing-card li.not-included {
+  color: var(--text-gray);
+}
+
 .price {
-  font-size: 2.4rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
   color: var(--text-white);
   letter-spacing: 0.5px;
 }
 
+.price .price-desc {
+  font-size: 1rem;
+  color: var(--text-white);
+  font-weight: 400;
+}
+
 .pricing-card h3 {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   letter-spacing: 0.5px;
   line-height: 2rem;
   font-weight: 400;
@@ -343,7 +351,7 @@ h1 {
 .pricing-card.featured {
   position: relative;
   z-index: 1;
-  border: 1px solid var(--blue);
+  outline: 2px solid var(--blue);
   box-shadow: 0 0 4px var(--blue);
   animation: flicker 1s infinite alternate;
 }
@@ -362,4 +370,53 @@ img.nope {
 
 .pricing-card a {
   margin-top: auto;
+}
+
+#blog {
+  padding: 100px 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  outline: 2px solid var(--border-color);
+  padding: 1rem;
+}
+
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.blog-card div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.blog-card h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.blog-card p {
+  color: var(--text-gray);
+  font-weight: 300;
+  margin-bottom: 1rem;
 }

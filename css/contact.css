@@ -113,7 +113,7 @@
   --angle: 0deg;
   content: "";
   position: absolute;
-  inset: -4px;
+  inset: -2px;
   z-index: -1;
   background: conic-gradient(
     from var(--angle),
