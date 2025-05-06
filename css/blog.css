@@ -43,7 +43,8 @@
 }
 
 #blog-container {
-  padding: 100px 10vw;
+  padding: 0 10vw 200px;
+  margin-top: -100px;
   display: flex;
   gap: 1rem;
 }
@@ -64,7 +65,7 @@
 
 .blog-post img {
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
   aspect-ratio: 4/3;
   object-fit: cover;
 }
