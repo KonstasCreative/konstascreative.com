@@ -2,12 +2,12 @@
   --bg-black: #0a0a0a;
   --bg-white: #f6f6f6;
   --text-white: #f5f5f5;
-  --text-gray: rgba(255, 255, 255, 0.6);
+  --text-gray: rgba(255, 255, 255, 0.7);
   --blue: #1e90ff;
   --light-blue: #97c4ff;
   --orange: #ff5722;
   --orange-50: #ff562280;
-  --border-color: #3b3b3b;
+  --border-color: #535353;
   --section-title-dark: #302f2f;
   --section-description-dark: #303236;
 }
@@ -253,7 +253,7 @@ nav ul li:hover {
 .testimonials-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2px;
+  gap: 1px;
 }
 
 .testimonial-card {
@@ -261,7 +261,7 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  outline: 2px solid var(--border-color);
+  outline: 1px solid var(--border-color);
 }
 
 footer {

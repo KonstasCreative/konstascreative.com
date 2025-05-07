@@ -101,7 +101,7 @@
   top: 0;
   bottom: 0;
   left: 14%;
-  width: 2px;
+  width: 1px;
   background: linear-gradient(
     to bottom,
     var(--blue),
@@ -115,7 +115,7 @@
   top: 0;
   bottom: 0;
   left: calc(14% + 40px);
-  width: 2px;
+  width: 1px;
   background: linear-gradient(
     to bottom,
     transparent,
@@ -128,7 +128,7 @@
   top: 0;
   bottom: 0;
   left: calc(14% + 80px);
-  width: 2px;
+  width: 1px;
   background: linear-gradient(
     to bottom,
     var(--blue),
@@ -141,7 +141,7 @@
 .line.horizontal1 {
   left: 0;
   bottom: 14%;
-  height: 2px;
+  height: 1px;
   width: 100%;
   background: linear-gradient(
     to right,
@@ -154,7 +154,7 @@
 .line.horizontal2 {
   left: 0;
   bottom: calc(14% + 40px);
-  height: 2px;
+  height: 1px;
   width: 100%;
   background: linear-gradient(
     to left,
@@ -167,7 +167,7 @@
 .line.horizontal3 {
   left: 0;
   bottom: calc(14% + 80px);
-  height: 2px;
+  height: 1px;
   width: 100%;
   background: linear-gradient(
     to right,
@@ -192,7 +192,7 @@
 }
 
 .process-step {
-  border: 2px solid var(--bg-black);
+  border: 1px solid var(--border-color);
   background: var(--bg-white);
   display: flex;
   flex-direction: column;
