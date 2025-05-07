@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  padding: 0 10vw;
+  padding: 0 5vw;
   overflow: hidden;
 }
 
@@ -43,7 +43,7 @@
 }
 
 #blog-container {
-  padding: 0 10vw 200px;
+  padding: 0 5vw 200px;
   margin-top: -100px;
   display: flex;
   gap: 1rem;
