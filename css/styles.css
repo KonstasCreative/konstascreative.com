@@ -35,6 +35,12 @@ h6 {
   font-family: "Inter", sans-serif;
 }
 
+h1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
 img,
 picture,
 video,
@@ -266,7 +272,7 @@ nav ul li:hover {
 }
 
 .section-header-dark {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -290,7 +296,7 @@ nav ul li:hover {
 }
 
 .section-header-light {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1rem;

@@ -10,7 +10,6 @@
 }
 
 #hero-about h1 {
-  font-size: 5rem;
   max-width: 20ch;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), #fff 100%);
   -webkit-background-clip: text;

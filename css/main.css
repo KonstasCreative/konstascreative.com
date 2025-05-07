@@ -32,9 +32,6 @@
 }
 
 h1 {
-  font-size: 5rem;
-  line-height: 1.2;
-  font-weight: 500;
   margin-bottom: 1rem;
   z-index: 3;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2), #fff 100%);
@@ -50,6 +47,12 @@ h1 {
   margin-bottom: 2rem;
   max-width: 75ch;
   z-index: 2;
+}
+
+@media (max-width: 1000px) {
+  #hero p {
+    font-size: 1rem;
+  }
 }
 
 .lightbeam-container {
@@ -252,6 +255,16 @@ h1 {
   flex-direction: column;
   gap: 200px;
   max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .image-container {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
 }
 
 .offer-container {
