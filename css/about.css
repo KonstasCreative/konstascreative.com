@@ -52,7 +52,8 @@
 }
 
 #aboutme img {
-  width: 50%;
+  width: 100%;
+  max-width: 800px;
 }
 
 #aboutme .section-description-light {
@@ -69,6 +70,13 @@
   font-weight: 300;
   margin: 2rem 0;
 }
+
+@media (max-width: 1101px) {
+  #aboutme {
+    flex-direction: column;
+  }
+}
+
 #work-process {
   background: var(--bg-white);
   color: var(--bg-black);
@@ -175,6 +183,12 @@
     var(--blue),
     transparent
   );
+}
+
+@media (max-width: 1001px) {
+  .line {
+    display: none;
+  }
 }
 
 #work-process .section-description-dark {

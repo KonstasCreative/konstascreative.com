@@ -26,6 +26,10 @@ body {
   scroll-behavior: smooth;
 }
 
+canvas {
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -283,7 +287,7 @@ nav ul li:hover {
   color: var(--section-description-dark);
   font-weight: 300;
   margin-bottom: 3rem;
-  max-width: 100ch;
+  max-width: 80ch;
 }
 
 .section-title-light {
@@ -307,7 +311,7 @@ nav ul li:hover {
   color: var(--text-gray);
   font-weight: 300;
   margin-bottom: 3rem;
-  max-width: 100ch;
+  max-width: 80ch;
 }
 
 #testimonials {
@@ -329,6 +333,12 @@ nav ul li:hover {
   flex-direction: column;
   gap: 1rem;
   outline: 1px solid var(--border-color);
+}
+
+@media (max-width: 1401px) {
+  .testimonial-card {
+    padding: 2rem;
+  }
 }
 
 footer {
@@ -357,12 +367,14 @@ footer {
   mask: radial-gradient(at center top, black, transparent 70%);
   pointer-events: none;
 }
-#footer-particles-js {
+
+#footer-particles {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
+
 .footer-container-top {
   display: flex;
   flex-wrap: wrap;
