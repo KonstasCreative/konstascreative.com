@@ -47,6 +47,12 @@
   gap: 3rem;
 }
 
+@media (max-width: 1001px) {
+  .form-text {
+    flex-direction: column;
+  }
+}
+
 .text-links-container {
   width: 100%;
   display: flex;
