@@ -107,7 +107,7 @@
 .line.vertical1 {
   top: 0;
   bottom: 0;
-  left: 14%;
+  left: 10%;
   width: 1px;
   background: linear-gradient(
     to bottom,
@@ -121,7 +121,7 @@
 .line.vertical2 {
   top: 0;
   bottom: 0;
-  left: calc(14% + 40px);
+  left: calc(10% + 40px);
   width: 1px;
   background: linear-gradient(
     to bottom,
@@ -134,7 +134,7 @@
 .line.vertical3 {
   top: 0;
   bottom: 0;
-  left: calc(14% + 80px);
+  left: calc(10% + 80px);
   width: 1px;
   background: linear-gradient(
     to bottom,
