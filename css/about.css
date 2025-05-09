@@ -82,9 +82,7 @@
   color: var(--bg-black);
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 200px 5vw;
   background-size: 100% 100%;
   background-position: 0px 0px, 0px 0px, 0px 0px;
@@ -147,7 +145,7 @@
 
 .line.horizontal1 {
   left: 0;
-  bottom: 14%;
+  bottom: 5%;
   height: 1px;
   width: 100%;
   background: linear-gradient(
@@ -160,7 +158,7 @@
 }
 .line.horizontal2 {
   left: 0;
-  bottom: calc(14% + 40px);
+  bottom: calc(5% + 40px);
   height: 1px;
   width: 100%;
   background: linear-gradient(
@@ -173,7 +171,7 @@
 }
 .line.horizontal3 {
   left: 0;
-  bottom: calc(14% + 80px);
+  bottom: calc(5% + 80px);
   height: 1px;
   width: 100%;
   background: linear-gradient(
@@ -185,56 +183,67 @@
   );
 }
 
-@media (max-width: 1001px) {
+/* @media (max-width: 1001px) {
   .line {
     display: none;
   }
+} */
+
+.steps-wrapper {
+  height: calc(100svh * 5);
 }
 
-#work-process .section-description-dark {
+.work-process-container {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.work-process-container .section-description-dark,
+.work-process-container .section-header-dark {
   text-align: center;
 }
 .process-container {
+  position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin-top: 3rem;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
 }
 
 .process-step {
-  border: 1px solid var(--border-color);
+  border: 1px solid #ccc;
   background: var(--bg-white);
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   padding: 1rem;
   justify-content: space-between;
   z-index: 2;
+  position: absolute;
+  will-change: top, opacity;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.5s ease-out, opacity 0.2s ease-out;
+  width: 100%;
 }
 
-.process-step:nth-child(1) {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
-
-.process-step:nth-child(2) {
-  grid-column: 3 / 4;
-  grid-row: 1;
-  aspect-ratio: 1/1;
-}
-
-.process-step:nth-child(3) {
-  grid-column: 1 / 2;
-  grid-row: 2;
-  aspect-ratio: 1/1;
-}
-
-.process-step:nth-child(4) {
-  grid-column: 2 / span 2;
-  grid-row: 2;
-}
 .process-step h3 {
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  line-height: normal;
+  font-weight: 400;
+  display: inline-flex;
+}
+.process-step h3 span {
   color: var(--blue);
+}
+.process-step p {
+  font-size: 16px;
+}
+
+.step-completed {
+  margin-left: auto;
+  display: none;
 }
