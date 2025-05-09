@@ -149,3 +149,12 @@ textarea:focus {
 .contact-form button {
   margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+  .links-header {
+    font-size: 1.2rem;
+  }
+  .contact-form button {
+    font-size: 16px;
+  }
+}

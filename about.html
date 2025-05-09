@@ -186,73 +186,61 @@
             <h4 class="section-title-dark">[ Our Work Process ]</h4>
             <h1 class="section-header-dark">We Take Care of Everything</h1>
             <p class="section-description-dark">
-              After a contract is signed we send a small questionnaire about
-              your business and what you offer, then we expand on that content
-              and write the entire site’s content for you, create the design,
-              get approval, then we build. Generally takes 2-3 weeks from start
-              to finish.
+              Once you sign the contract and pay a €100 deposit, we’ll create
+              initial design screens for your approval. After you sign off, we
+              handle the full design and development, launch your site, and then
+              support you for one month—covering any bugs or minor content
+              tweaks.
             </p>
             <div class="process-container">
               <div class="process-step" data-step="0">
                 <h3>
-                  <span>1.</span>&nbsp;Schedule a call.
+                  <span>1.&nbsp;</span>Schedule a call.
                   <img
                     class="step-completed"
                     src="assets/icons/check-blue.svg"
                     alt="check"
                   />
                 </h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Autem excepturi sint eius dolores perferendis quos iure,
-                  laboriosam quibusdam ea ut repellat dolorem? Exercitationem
-                  fugiat vel, dolor voluptatibus illum perferendis magni.
-                </p>
+                <p>We’ll chat about your goals and vision.</p>
               </div>
               <div class="process-step" data-step="1">
                 <h3>
-                  <span>2.</span>&nbsp;Create a custom proposal.<img
+                  <span>2.&nbsp;</span>Create a custom proposal.<img
                     class="step-completed"
                     src="assets/icons/check-blue.svg"
                     alt="check"
                   />
                 </h3>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Autem excepturi sint eius dolores perferendis quos iure,
-                  laboriosam quibusdam ea ut repellat dolorem? Exercitationem
-                  fugiat vel, dolor voluptatibus illum perferendis magni.
+                  We craft key page mockups so you can visualize—and approve—the
+                  look.
                 </p>
               </div>
               <div class="process-step" data-step="2">
                 <h3>
-                  <span>3.</span>&nbsp;Start Developing the Site<img
+                  <span>3.&nbsp;</span>Design & Develop<img
                     class="step-completed"
                     src="assets/icons/check-blue.svg"
                     alt="check"
                   />
                 </h3>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Autem excepturi sint eius dolores perferendis quos iure,
-                  laboriosam quibusdam ea ut repellat dolorem? Exercitationem
-                  fugiat vel, dolor voluptatibus illum perferendis magni.
+                  Upon design approval, we create your site and refine it with
+                  your feedback.
                 </p>
               </div>
               <div class="process-step" data-step="3">
                 <h3>
-                  <span>4.</span>&nbsp;Deliver your project and provide
-                  support.<img
+                  <span>4.&nbsp;</span>Launch & Support<img
                     class="step-completed"
                     src="assets/icons/check-blue.svg"
                     alt="check"
                   />
                 </h3>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Autem excepturi sint eius dolores perferendis quos iure,
-                  laboriosam quibusdam ea ut repellat dolorem? Exercitationem
-                  fugiat vel, dolor voluptatibus illum perferendis magni.
+                  We go live, then stay on hand for 30 days to fix bugs and make
+                  adjustments.
                 </p>
               </div>
             </div>
@@ -373,81 +361,6 @@
     </footer>
     <script src="js/script.js"></script>
     <script src="js/particles.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const steps = Array.from(document.querySelectorAll(".process-step"));
-        const wrapper = document.querySelector(".steps-wrapper");
-        const stickyTop = 100;
-        const triggerLast = 200;
-        const rem = parseFloat(
-          getComputedStyle(document.documentElement).fontSize
-        );
-        const padPx = 2 * rem; // your 2rem padding in px
-        const containerH = window.innerHeight - stickyTop;
-        const numSteps = steps.length;
-        const maxScroll = numSteps * containerH;
-
-        // 1) Build dynamic offsets array:
-        //    offsets[0] = 0 (first card sits at top 0 when fully in);
-        //    offsets[i] = offsets[i-1] + height of previous h3 + padPx
-        const offsets = steps.reduce((acc, step, i) => {
-          if (i === 0) {
-            acc.push(0);
-          } else {
-            const prevH3 = steps[i - 1].querySelector("h3");
-            const prevHgt = prevH3.getBoundingClientRect().height;
-            acc.push(acc[i - 1] + prevHgt + padPx);
-          }
-          return acc;
-        }, []);
-
-        function hideAll() {
-          steps.forEach((s) => {
-            s.style.top = containerH + "px";
-            s.style.opacity = 0;
-            const icon = s.querySelector(".step-completed");
-            if (icon) icon.style.display = "none";
-          });
-        }
-
-        function onScroll() {
-          const rect = wrapper.getBoundingClientRect();
-          if (rect.top > stickyTop || rect.bottom < stickyTop) {
-            hideAll();
-            return;
-          }
-
-          const scrolled = Math.min(stickyTop - rect.top, maxScroll);
-
-          steps.forEach((step, i) => {
-            let enterStart, enterEnd;
-            if (i < numSteps - 1) {
-              enterStart = i * containerH;
-              enterEnd = (i + 1) * containerH;
-            } else {
-              enterStart = maxScroll - triggerLast;
-              enterEnd = maxScroll;
-            }
-
-            const rawProg = (scrolled - enterStart) / (enterEnd - enterStart);
-            const prog = Math.max(0, Math.min(rawProg, 1));
-
-            // lerp from off-screen bottom → dynamic offset
-            const topPx = (1 - prog) * containerH + prog * offsets[i];
-            step.style.top = topPx + "px";
-            step.style.opacity = prog;
-
-            // toggle icon
-            const icon = step.querySelector(".step-completed");
-            if (icon)
-              icon.style.display =
-                scrolled >= enterEnd ? "inline-block" : "none";
-          });
-        }
-
-        window.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
-      });
-    </script>
+    <script src="js/steps.js"></script>
   </body>
 </html>

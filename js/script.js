@@ -3,12 +3,43 @@ const hamburger = document.getElementById("hamburger");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const dropdownLinks = document.querySelectorAll(".dropdown-menu ul a");
 let isMobileSetup = false;
+let lastScrollY = window.scrollY;
+let lastWidthMode = window.innerWidth <= 768;
 
 window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  scrollY > 100
-    ? navbar.classList.add("navbar-scroll")
-    : navbar.classList.remove("navbar-scroll");
+  const currentScrollY = window.scrollY;
+  const isMobile = window.innerWidth <= 768;
+
+  // If we’ve just crossed the 768px threshold, clear any leftover styles
+  if (isMobile !== lastWidthMode) {
+    navbar.style.transform = "";
+    lastWidthMode = isMobile;
+  }
+
+  if (isMobile) {
+    // Always show at the very top
+    if (currentScrollY === 0) {
+      navbar.style.transform = "translateY(0)";
+      navbar.classList.remove("navbar-scroll");
+    } else {
+      // Scrolling down? hide. Scrolling up? show.
+      if (currentScrollY > lastScrollY) {
+        navbar.style.transform = "translateY(-100%)";
+      } else {
+        navbar.style.transform = "translateY(0)";
+        navbar.classList.add("navbar-scroll");
+      }
+    }
+  } else {
+    // On desktop: keep your existing “navbar-scroll” logic
+    if (currentScrollY > 100) {
+      navbar.classList.add("navbar-scroll");
+    } else {
+      navbar.classList.remove("navbar-scroll");
+    }
+  }
+
+  lastScrollY = currentScrollY;
 });
 
 function toggleDropdown() {

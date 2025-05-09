@@ -475,3 +475,16 @@ img.nope {
   font-weight: 300;
   margin-bottom: 1rem;
 }
+
+.blog-card div a {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .blog-card p,
+  .card p,
+  .offer-description,
+  .pricing-card li {
+    font-size: 16px;
+  }
+}
