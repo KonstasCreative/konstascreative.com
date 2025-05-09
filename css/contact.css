@@ -100,59 +100,20 @@
   text-decoration: underline;
 }
 
-.form-container {
-  position: relative;
-  padding: 30px 40px;
-  background: var(--bg-black);
+.contact-form {
   width: 100%;
 }
 
-.form-container:after,
-.form-container::before {
-  --angle: 0deg;
-  content: "";
-  position: absolute;
-  inset: -2px;
-  z-index: -1;
-  background: conic-gradient(
-    from var(--angle),
-    transparent 0%,
-    var(--blue) 50%,
-    var(--orange) 100%
-  );
-  animation: glowing-border 4s linear infinite;
-}
-
-.form-container::before {
-  z-index: -2;
-  filter: blur(20px);
-  opacity: 0.7;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes glowing-border {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
-}
-
-.contact-form h2 {
+.text-links-container h2 {
   margin-bottom: 20px;
   font-size: 3rem;
+  font-weight: 300;
 }
 
 label {
   font-family: "Roboto Mono", monospace;
   display: block;
-  margin-top: 15px;
+  margin-top: 35px;
   margin-bottom: 5px;
   font-weight: 500;
   color: var(--text-gray);
@@ -166,7 +127,7 @@ textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid var(--border-color);
-  background: var(--section-title-dark);
+  background: var(--bg-black);
   font-size: 16px;
   resize: none;
   color: var(--bg-white);
@@ -174,9 +135,9 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #0077ff;
+  border-color: var(--blue);
   outline: none;
-  box-shadow: 0 0 4px rgba(0, 119, 255, 0.2);
+  box-shadow: 0 0 4px var(--blue);
 }
 
 .contact-form button {

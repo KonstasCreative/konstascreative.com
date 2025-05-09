@@ -79,6 +79,7 @@
 
       <section class="form-text">
         <div class="text-links-container">
+          <h2>Leave Us a Message</h2>
           <p class="section-description-light">
             Send us an email and let us know everything you want out of a new
             site. We respond to everyone within 24 hours of contacting us. Or
@@ -114,45 +115,41 @@
             </li>
           </ul>
         </div>
-        <div class="form-container">
-          <form class="contact-form">
-            <h2>Leave Us a Message</h2>
+        <form class="contact-form">
+          <label for="name">Name*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="name"
+          />
 
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              autocomplete="name"
-            />
+          <label for="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email"
+          />
 
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              autocomplete="email"
-            />
+          <label for="phone">Phone*</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            autocomplete="tel"
+          />
 
-            <label for="phone">Phone</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              autocomplete="tel"
-            />
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit" class="secondaryBtn">
-              <span>SEND MESSAGE</span>
-            </button>
-          </form>
-        </div>
+          <button type="submit" class="secondaryBtn">
+            <span>SEND MESSAGE</span>
+          </button>
+        </form>
       </section>
     </main>
 
