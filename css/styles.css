@@ -96,6 +96,7 @@ nav {
   padding: 1rem 5vw;
   font-size: 0.95rem;
   z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .navbar-scroll {
@@ -270,7 +271,7 @@ nav ul li:hover {
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--section-title-dark);
   margin-bottom: 1rem;
 }
@@ -294,7 +295,7 @@ nav ul li:hover {
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--text-gray);
   margin-bottom: 1rem;
 }
@@ -454,4 +455,13 @@ footer {
 
 #copyright {
   color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+  a,
+  p,
+  .section-description-light,
+  .section-description-dark {
+    font-size: 16px;
+  }
 }
