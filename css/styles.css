@@ -384,19 +384,6 @@ footer {
   gap: 2rem;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.logo-container img {
-  width: 90px;
-  aspect-ratio: 1/1;
-}
-.logo-name {
-  font-size: 1.7rem;
-  font-weight: 800;
-}
 .logo-desc {
   letter-spacing: 5px;
   font-size: 1.5rem;
