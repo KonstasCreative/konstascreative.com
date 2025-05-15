@@ -345,7 +345,7 @@ nav ul li:hover {
 
 footer {
   position: relative;
-  padding: 200px 5vw 30px;
+  padding: 200px 5vw 5px;
   color: var(--text-white);
   display: flex;
   flex-direction: column;
