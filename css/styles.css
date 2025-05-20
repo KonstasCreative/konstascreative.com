@@ -39,7 +39,7 @@ h6 {
   font-family: "Inter", sans-serif;
 }
 
-h1 {
+:where(h1) {
   font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
   line-height: 1.2;
   font-weight: 400;

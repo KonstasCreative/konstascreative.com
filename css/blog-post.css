@@ -69,3 +69,7 @@
   border: 1px solid var(--border-color);
   padding: 1.25rem;
 }
+
+.image-container picture {
+  filter: brightness(0.95);
+}

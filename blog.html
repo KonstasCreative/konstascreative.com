@@ -74,7 +74,14 @@
   <body>
     <nav id="navbar">
       <div class="nav-container">
-        <img class="logo" src="assets/images/logo.png" alt="logo" />
+        <picture class="logo">
+          <!-- AVIF first -->
+          <source srcset="assets/images/logo.avif" type="image/avif" />
+          <!-- Then WebP -->
+          <source srcset="assets/images/logo.webp" type="image/webp" />
+          <!-- And finally a JPEG/PNG fallback -->
+          <img src="assets/images/logo.png" alt="Konstas Creative logo" />
+        </picture>
         <ul>
           <li><a href="index.html">HOME</a></li>
           <li><a href="about.html">ABOUT US</a></li>

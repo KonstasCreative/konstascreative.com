@@ -33,7 +33,7 @@
   z-index: 3;
 }
 
-h1 {
+:where(h1) {
   margin-bottom: 1rem;
   z-index: 3;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.2), #fff 100%);
