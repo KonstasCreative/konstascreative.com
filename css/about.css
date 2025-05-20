@@ -22,7 +22,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform-origin: center bottom;
+  transform: translateX(-50%) scale(0.5, 0.5);
   width: 150%;
   height: 100%;
   background: linear-gradient(
@@ -34,7 +35,15 @@
   );
   mask: radial-gradient(at center bottom, black, transparent 50%);
   pointer-events: none;
+  animation: openLight 1s ease-out forwards;
 }
+
+@keyframes openLight {
+  to {
+    transform: translateX(-50%) scale(1, 1);
+  }
+}
+
 #particles-js {
   position: absolute;
   bottom: 0;
