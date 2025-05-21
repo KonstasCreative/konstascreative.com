@@ -100,11 +100,8 @@
     <nav id="navbar">
       <div class="nav-container">
         <picture class="logo">
-          <!-- AVIF first -->
           <source srcset="assets/images/logo.avif" type="image/avif" />
-          <!-- Then WebP -->
           <source srcset="assets/images/logo.webp" type="image/webp" />
-          <!-- And finally a JPEG/PNG fallback -->
           <img src="assets/images/logo.png" alt="Konstas Creative logo" />
         </picture>
         <ul>
@@ -120,9 +117,9 @@
       <div class="nav-btns-container">
         <a class="primaryBtn" href="contact.html">GET STARTED</a>
         <button id="hamburger" class="primaryBtn" aria-label="burger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </button>
       </div>
       <div class="dropdown-menu">
@@ -687,10 +684,20 @@
       <div class="footer-container-top">
         <div class="footer-col">
           <div class="logo-container">
-            <img
-              src="assets/images/konstascreative-logo.png"
-              alt="Konstas Creative logo"
-            />
+            <picture>
+              <source
+                srcset="assets/images/konstascreative.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="assets/images/konstascreative.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/images/konstascreative.png"
+                alt="Konstas Creative logo"
+              />
+            </picture>
           </div>
           <p>
             I’m happy to hop on a quick call or answer-by-email. No

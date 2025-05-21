@@ -150,12 +150,26 @@ nav ul li:hover {
   cursor: pointer;
   z-index: 1000;
   border-radius: 9999px;
+  padding: 0.5rem 0.75rem;
 }
 
 #hamburger span {
-  width: 10px;
+  width: 16px;
   height: 1px;
   background-color: var(--text-white);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#navbar.dropdown-active #hamburger .line1 {
+  transform: translateY(5px) rotate(45deg);
+}
+
+#navbar.dropdown-active #hamburger .line2 {
+  opacity: 0;
+}
+
+#navbar.dropdown-active #hamburger .line3 {
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 .dropdown-menu {
@@ -384,18 +398,15 @@ footer {
   gap: 2rem;
 }
 
-.logo-desc {
-  letter-spacing: 5px;
-  font-size: 1.5rem;
-  color: var(--text-gray);
-  font-weight: 400;
-  max-width: 50ch;
-}
-
 .footer-col {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.logo-container {
+  width: 90%;
+  max-width: 34ch;
 }
 
 .footer-col-subcol-container {
@@ -426,7 +437,7 @@ footer {
 .footer-container-bottom {
   font-size: 14px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
@@ -451,5 +462,9 @@ footer {
   .section-description-light,
   .section-description-dark {
     font-size: 16px;
+  }
+  .footer-container-bottom {
+    justify-content: center;
+    text-align: center;
   }
 }

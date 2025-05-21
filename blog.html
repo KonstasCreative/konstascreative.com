@@ -75,11 +75,8 @@
     <nav id="navbar">
       <div class="nav-container">
         <picture class="logo">
-          <!-- AVIF first -->
           <source srcset="assets/images/logo.avif" type="image/avif" />
-          <!-- Then WebP -->
           <source srcset="assets/images/logo.webp" type="image/webp" />
-          <!-- And finally a JPEG/PNG fallback -->
           <img src="assets/images/logo.png" alt="Konstas Creative logo" />
         </picture>
         <ul>
@@ -95,9 +92,9 @@
       <div class="nav-btns-container">
         <a class="primaryBtn" href="contact.html">GET STARTED</a>
         <button id="hamburger" class="primaryBtn" aria-label="burger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </button>
       </div>
       <div class="dropdown-menu">
@@ -240,7 +237,15 @@
             </div>
           </li>
         </ul>
-        <aside class="extra-col">asdadas</aside>
+        <aside class="extra-col">
+          <section class="sidebar-widget pro-tip">
+            <p class="section-title-light">[ Pro Tip ]</p>
+            <blockquote class="pro-tip-block">
+              <h3 id="tip-title">Loading tip…</h3>
+              <p id="tip-text">Please wait.</p>
+            </blockquote>
+          </section>
+        </aside>
       </section>
     </main>
 
@@ -251,10 +256,20 @@
       <div class="footer-container-top">
         <div class="footer-col">
           <div class="logo-container">
-            <img
-              src="assets/images/konstascreative-logo.png"
-              alt="Konstas Creative logo"
-            />
+            <picture>
+              <source
+                srcset="assets/images/konstascreative.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="assets/images/konstascreative.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/images/konstascreative.png"
+                alt="Konstas Creative logo"
+              />
+            </picture>
           </div>
           <p>
             We believe small businesses deserve better. Just because you’re
@@ -308,5 +323,71 @@
     </footer>
     <script src="js/script.js"></script>
     <script src="js/particles.js"></script>
+    <script>
+      (function () {
+        const tips = [
+          {
+            title: "Optimize Your Images",
+            text: "Resize large photos to the exact dimensions you’ll display, then compress them to cut file size by at least 50%—your pages will load that much faster.",
+          },
+          {
+            title: "Audit Your Site with Lighthouse",
+            text: "Run Chrome’s Lighthouse audit regularly (in DevTools → Lighthouse) to spot performance, accessibility, and best-practice issues—then tackle the highest-impact fixes first.",
+          },
+          {
+            title: "Write Meaningful Alt Text",
+            text: "Descriptive alt attributes on images improve accessibility and give search engines extra context, helping with SEO and screen-reader friendliness.",
+          },
+          {
+            title: "Clear Value Proposition",
+            text: "Make it obvious what you offer and why you’re different. A clear headline and subhead keep visitors from bouncing.",
+          },
+          {
+            title: "Show Real Results",
+            text: "Highlight a recent win—like a 30% boost in bookings—to let prospects see tangible benefits of working with you.",
+          },
+          {
+            title: "Genuine Photography",
+            text: "Use real photos of your team, store, or products. People connect with faces far more than generic stock images.",
+          },
+          {
+            title: "Mobile-First Design",
+            text: "Design for phones first: ensure buttons are thumb-friendly and text stays legible without zooming.",
+          },
+          {
+            title: "Multiple Contact Options",
+            text: "Offer phone, email, and even WhatsApp links—making it easy for potential clients to reach you in one click.",
+          },
+          {
+            title: "Social Proof",
+            text: "Display a customer quote or logo strip in your sidebar to build trust immediately with new visitors.",
+          },
+          {
+            title: "Single Call-to-Action",
+            text: "Limit each page to one clear invitation—like “Get Your Free Quote”—so visitors know exactly what to do next.",
+          },
+          {
+            title: "Friendly Loading",
+            text: "If your site takes a moment to load, show a brief message (“Hang tight, loading…”) or animation to keep interest.",
+          },
+          {
+            title: "Fresh Content",
+            text: "Even 1–2 new tips or news items a month shows you’re active and invested in your business.",
+          },
+          {
+            title: "Consistent Branding",
+            text: "Stick to 2–3 brand colors and fonts across your site. Consistency feels professional and memorable.",
+          },
+        ];
+
+        const titleEl = document.getElementById("tip-title");
+        const textEl = document.getElementById("tip-text");
+        if (!titleEl || !textEl) return;
+
+        const { title, text } = tips[Math.floor(Math.random() * tips.length)];
+        titleEl.textContent = title;
+        textEl.textContent = text;
+      })();
+    </script>
   </body>
 </html>
