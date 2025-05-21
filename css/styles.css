@@ -24,6 +24,7 @@ body {
   height: 100%;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
+  scroll-margin-top: -100px;
 }
 
 canvas {
