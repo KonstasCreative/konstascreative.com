@@ -2,7 +2,7 @@ function createParticleEffect(canvasId) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
-  const PARTICLE_COUNT = 100;
+  const PARTICLE_COUNT = 140;
   let particles = [];
 
   // resize canvas to full window
