@@ -412,6 +412,12 @@ h1 {
   animation: flicker 1s infinite alternate;
 }
 
+.pricing-note {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-top: 1rem;
+}
+
 @media (max-width: 1401px) {
   .pricing-card {
     padding: 2rem;
