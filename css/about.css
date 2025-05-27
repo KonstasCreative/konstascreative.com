@@ -93,7 +93,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 200px 5vw;
+  padding: 200px 5vw 100px;
   background-size: 100% 100%;
   background-position: 0px 0px, 0px 0px, 0px 0px;
   background-image: radial-gradient(
@@ -211,6 +211,12 @@
   align-items: center;
   height: 100svh;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .work-process-container {
+    top: 40px;
+  }
 }
 
 .work-process-container .section-description-dark,
