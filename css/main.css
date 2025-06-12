@@ -345,6 +345,11 @@ h1 {
   width: 100%;
   aspect-ratio: 17/9;
   object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.works-card:hover img {
+  filter: brightness(1.2);
 }
 
 .works-card a {
