@@ -338,15 +338,40 @@ h1 {
 .works-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .works-card img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 17/9;
   object-fit: cover;
 }
 
+.works-card a {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.works-card a:hover {
+  text-decoration: underline;
+}
+
+#portfolio-particles {
+  width: 100%;
+  aspect-ratio: 17/9;
+  background-color: var(--bg-black);
+  animation: flicker-inset 1s infinite alternate;
+}
+@keyframes flicker-inset {
+  0% {
+    box-shadow: inset 0 0 12px var(--blue);
+  }
+  100% {
+    box-shadow: inset 0 0 24px var(--blue);
+  }
+}
 #pricing {
   padding: 200px 5vw;
   background: var(--bg-black);
