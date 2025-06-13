@@ -232,6 +232,33 @@ nav ul li:hover {
   color: var(--bg-black);
 }
 
+.arrow-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease;
+}
+
+.arrow.clone {
+  transform: translateX(-100%);
+}
+
+.secondaryBtn:hover .arrow.original {
+  transform: translateX(100%);
+}
+
+.secondaryBtn:hover .arrow.clone {
+  transform: translateX(0%);
+}
+
 .secondaryBtn img,
 .secondaryBtn span {
   z-index: 2;
@@ -349,6 +376,12 @@ nav ul li:hover {
   flex-direction: column;
   gap: 1rem;
   outline: 1px solid var(--border-color);
+}
+
+.testimonial-card .position {
+  font-size: 14px;
+  color: var(--text-gray);
+  font-family: "Roboto Mono", monospace;
 }
 
 @media (max-width: 1401px) {

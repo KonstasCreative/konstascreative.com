@@ -341,14 +341,14 @@ h1 {
   gap: 0.75rem;
 }
 
-.works-card img {
+.works-card .portfolio-img {
   width: 100%;
   aspect-ratio: 17/9;
   object-fit: cover;
   transition: filter 0.4s ease;
 }
 
-.works-card:hover img {
+.works-card:hover .portfolio-img {
   filter: brightness(1.2);
 }
 
@@ -357,10 +357,35 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
 }
 
 .works-card a:hover {
   text-decoration: underline;
+}
+
+.works-card .icon-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 1.25rem;
+  width: 1.25rem;
+  position: relative;
+}
+
+.works-card .icon-wrapper img {
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
+  transition: transform 0.4s ease;
+}
+
+.works-card a:hover .icon-wrapper img:first-child {
+  transform: translateY(-100%);
+}
+
+.works-card a:hover .icon-wrapper img:last-child {
+  transform: translateY(-100%);
 }
 
 #portfolio-particles {
