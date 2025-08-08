@@ -10,13 +10,14 @@
   margin: 0;
   padding: 0;
 }
-
+html,
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 p {
   font-weight: 300;
