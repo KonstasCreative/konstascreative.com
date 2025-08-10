@@ -18,13 +18,41 @@
         <div class="logo">
           <p>CompanyName</p>
         </div>
-        <ul>
+        <!-- Burger Icon -->
+        <div class="burger" id="burger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#fff"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links">
           <li><a href="#">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#">SERVICES</a></li>
           <li><a href="#testimonials">TESTIMONIALS</a></li>
           <li><a href="#pricing">PRICING</a></li>
           <li><a class="primaryBtn" href="#contact">CONTACT</a></li>
+        </ul>
+
+        <!-- Mobile Dropdown Menu -->
+        <ul class="mobile-menu" id="mobileMenu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#testimonials">TESTIMONIALS</a></li>
+          <li><a href="#pricing">PRICING</a></li>
+          <li style="padding: 12px 16px">
+            <a class="primaryBtn" href="#contact">CONTACT</a>
+          </li>
         </ul>
       </nav>
       <h1>This is our company's moto.</h1>
@@ -278,5 +306,19 @@
         </p>
       </div>
     </footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 940 && mobileMenu.classList.contains("open")) {
+          mobileMenu.classList.remove("open");
+        }
+      });
+    </script>
   </body>
 </html>

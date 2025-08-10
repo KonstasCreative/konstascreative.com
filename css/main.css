@@ -201,8 +201,6 @@ h1 {
   background: var(--bg-white);
   background-size: 100% 100%;
   color: var(--bg-black);
-  display: flex;
-  gap: 4rem;
   background-size: 100% 100%;
   background-position: 0px 0px, 0px 0px, 0px 0px;
   background-image: radial-gradient(
@@ -260,6 +258,11 @@ h1 {
     var(--blue),
     transparent
   );
+}
+
+#whatweoffer {
+  display: flex;
+  gap: 4rem;
 }
 
 #multisection .image-container {
@@ -329,6 +332,11 @@ h1 {
   font-weight: 300;
 }
 
+#portfolio {
+  z-index: 1;
+  backdrop-filter: blur(1px);
+}
+
 .works-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -358,6 +366,7 @@ h1 {
   align-items: center;
   gap: 0.5rem;
   position: relative;
+  margin-top: auto;
 }
 
 .works-card a:hover {
