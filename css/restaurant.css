@@ -405,6 +405,10 @@ footer p {
     left: 0;
     transform: none;
   }
+  .team-members .member h3 {
+    font-size: 1.2rem;
+  }
+
   .about-container {
     flex-direction: column;
     align-items: center;
